@@ -92,7 +92,7 @@ const Sidebar = () => {
                     </div>
                     <PerfectScrollbar className="h-[calc(100vh-80px)] relative">
                         <ul className="relative font-semibold space-y-0.5 p-4 py-0">
-                            <li className="menu nav-item">
+                            {/* <li className="menu nav-item">
                                 <button type="button" className={`${currentMenu === 'dashboard' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('dashboard')}>
                                     <div className="flex items-center">
                                         <IconMenuDashboard
@@ -121,36 +121,76 @@ const Sidebar = () => {
                                         </li>
                                     </ul>
                                 </AnimateHeight>
-                            </li>
+                            </li> */}
 
-                            <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
+                            {/* <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('apps')}</span>
-                            </h2>
+                            </h2> */}
 
                             <li className="nav-item">
                                 <ul>
+                                <li className="nav-item">
+                                        <NavLink to="/finance" className="group">
+                                            <div className="flex items-center">
+                                                <IconMenuDashboard className="group-hover:!text-primary shrink-0" />
+                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('dashboard')}</span>
+                                            </div>
+                                        </NavLink>
+                                    </li>
                                     <li className="nav-item">
+                                        <NavLink to="/Pages/Admissionform" className="group">
+                                            <div className="flex items-center">
+                                                <IconMenuWidgets className="group-hover:!text-primary shrink-0" />
+                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Add Student')}</span>
+                                            </div>
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink to="/Pages/PayFeeform" className="group">
+                                            <div className="flex items-center">
+                                                <IconMenuTodo className="group-hover:!text-primary shrink-0" />
+                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Pay Fee')}</span>
+                                            </div>
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink to="/Pages/Ledger" className="group">
+                                            <div className="flex items-center">
+                                                <IconMenuDatatables className="group-hover:!text-primary shrink-0" />
+                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Ledger')}</span>
+                                            </div>
+                                        </NavLink>
+                                    </li>
+                                    {/* <li className="nav-item">
                                         <NavLink to="/apps/chat" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuChat className="group-hover:!text-primary shrink-0" />
                                                 <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('chat')}</span>
                                             </div>
                                         </NavLink>
-                                    </li>
-                                    <li className="nav-item">
+                                    </li> */}
+                                    {/* <li className="nav-item">
                                         <NavLink to="/apps/mailbox" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuMailbox className="group-hover:!text-primary shrink-0" />
                                                 <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('mailbox')}</span>
                                             </div>
                                         </NavLink>
-                                    </li>
-                                    <li className="nav-item">
+                                    </li> */}
+                                    {/* <li className="nav-item">
                                         <NavLink to="/apps/todolist" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuTodo className="group-hover:!text-primary shrink-0" />
                                                 <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('todo_list')}</span>
+                                            </div>
+                                        </NavLink>
+                                    </li> */}
+                                          <li className="nav-item">
+                                        <NavLink to="/apps/contacts" className="group">
+                                            <div className="flex items-center">
+                                                <IconMenuUsers className="group-hover:!text-primary shrink-0" />
+                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('students')}</span>
                                             </div>
                                         </NavLink>
                                     </li>
@@ -162,24 +202,17 @@ const Sidebar = () => {
                                             </div>
                                         </NavLink>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <NavLink to="/apps/scrumboard" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuScrumboard className="group-hover:!text-primary shrink-0" />
                                                 <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('scrumboard')}</span>
                                             </div>
                                         </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink to="/apps/contacts" className="group">
-                                            <div className="flex items-center">
-                                                <IconMenuContacts className="group-hover:!text-primary shrink-0" />
-                                                <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('contacts')}</span>
-                                            </div>
-                                        </NavLink>
-                                    </li>
+                                    </li> */}
 
-                                    <li className="menu nav-item">
+
+                                    {/* <li className="menu nav-item">
                                         <button type="button" className={`${currentMenu === 'invoice' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('invoice')}>
                                             <div className="flex items-center">
                                                 <IconMenuInvoice className="group-hover:!text-primary shrink-0" />
@@ -207,7 +240,7 @@ const Sidebar = () => {
                                                 </li>
                                             </ul>
                                         </AnimateHeight>
-                                    </li>
+                                    </li> */}
 
                                     <li className="nav-item">
                                         <NavLink to="/apps/calendar" className="group">
@@ -218,6 +251,30 @@ const Sidebar = () => {
                                         </NavLink>
                                     </li>
                                 </ul>
+                            </li>
+
+                            <li className="menu nav-item">
+                                <button type="button" className={`${currentMenu === 'users' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('users')}>
+                                    <div className="flex items-center">
+                                        <IconMenuUsers className="group-hover:!text-primary shrink-0" />
+                                        <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('users')}</span>
+                                    </div>
+
+                                    <div className={currentMenu !== 'users' ? 'rtl:rotate-90 -rotate-90' : ''}>
+                                        <IconCaretDown />
+                                    </div>
+                                </button>
+
+                                <AnimateHeight duration={300} height={currentMenu === 'users' ? 'auto' : 0}>
+                                    <ul className="sub-menu text-gray-500">
+                                        <li>
+                                            <NavLink to="/users/profile">{t('profile')}</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to="/users/user-account-settings">{t('account_settings')}</NavLink>
+                                        </li>
+                                    </ul>
+                                </AnimateHeight>
                             </li>
 
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">

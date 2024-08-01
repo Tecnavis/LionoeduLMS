@@ -1,4 +1,10 @@
 import { lazy } from 'react';
+import PayFeeform from '../pages/Pages/PayFeeForm';
+import Ledger from '../pages/Pages/Ledger';
+import AdmissionForm from '../pages/Pages/Admissionform';
+// const Admissionform = lazy(() => import('../pages/Admissionform'));
+// const Ledger = lazy(() => import('../pages/Ledger'));
+// const PayFeeForm = lazy(() => import('../pages/PayFeeForm'));
 const Index = lazy(() => import('../pages/Index'));
 const Analytics = lazy(() => import('../pages/Analytics'));
 const Finance = lazy(() => import('../pages/Finance'));
@@ -111,24 +117,24 @@ const routes = [
     //     element: <Index />,
     // },
     // analytics page
-    {
-        path: '/analytics',
-        element: <Analytics />,
-    },
+    // {
+    //     path: '/analytics',
+    //     element: <Analytics />,
+    // },
     // finance page
     {
         path: '/finance',
         element: <Finance />,
     },
     // crypto page
-    {
-        path: '/crypto',
-        element: <Crypto />,
-    },
-    {
-        path: '/apps/todolist',
-        element: <Todolist />,
-    },
+    // {
+    //     path: '/crypto',
+    //     element: <Crypto />,
+    // },
+    // {
+    //     path: '/apps/todolist',
+    //     element: <Todolist />,
+    // },
     {
         path: '/apps/notes',
         element: <Notes />,
@@ -137,23 +143,23 @@ const routes = [
         path: '/apps/contacts',
         element: <Contacts />,
     },
-    {
-        path: '/apps/mailbox',
-        element: <Mailbox />,
-    },
-    {
-        path: '/apps/invoice/list',
-        element: <List />,
-    },
+    // {
+    //     path: '/apps/mailbox',
+    //     element: <Mailbox />,
+    // },
+    // {
+    //     path: '/apps/invoice/list',
+    //     element: <List />,
+    // },
     // Apps page
-    {
-        path: '/apps/chat',
-        element: <Chat />,
-    },
-    {
-        path: '/apps/scrumboard',
-        element: <Scrumboard />,
-    },
+    // {
+    //     path: '/apps/chat',
+    //     element: <Chat />,
+    // },
+    // {
+    //     path: '/apps/scrumboard',
+    //     element: <Scrumboard />,
+    // },
     {
         path: '/apps/calendar',
         element: <Calendar />,
@@ -394,6 +400,21 @@ const routes = [
     {
         path: '/pages/contact-us-cover',
         element: <ContactUsCover />,
+        layout: 'blank',
+    },
+    {
+        path: '/pages/PayFeeform',
+        element: <PayFeeform />,
+        layout: 'blank',
+    },
+    {
+        path: '/pages/AdmissionForm',
+        element: <AdmissionForm />,
+        layout: 'blank',
+    },
+    {
+        path: '/pages/Ledger',
+        element: <Ledger />,
         layout: 'blank',
     },
     {
