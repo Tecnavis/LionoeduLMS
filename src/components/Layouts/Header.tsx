@@ -5,6 +5,7 @@ import { IRootState } from '../../store';
 import { toggleRTL, toggleTheme, toggleSidebar } from '../../store/themeConfigSlice';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import logo from './32x38.png'
 import Dropdown from '../Dropdown';
 import IconMenu from '../Icon/IconMenu';
 import IconCalendar from '../Icon/IconCalendar';
@@ -144,7 +145,7 @@ const Header = () => {
                 <div className="relative bg-white flex w-full items-center px-5 py-2.5 dark:bg-black">
                     <div className="horizontal-logo flex lg:hidden justify-between items-center ltr:mr-2 rtl:ml-2">
                         <Link to="/finance" className="main-logo flex items-center shrink-0">
-                            <img className="w-8 ltr:-ml-1 rtl:-mr-1 inline" src="./32x38.png" alt="logo" />
+                            <img className="w-8 ltr:-ml-1 rtl:-mr-1 inline" src={logo} alt="logo" />
                             <span className="text-2xl ltr:ml-1.5 rtl:mr-1.5  font-semibold  align-middle hidden md:inline dark:text-white-light transition-all duration-300">LionoEdu</span>
                         </Link>
                         <button
