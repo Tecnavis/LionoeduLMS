@@ -5,7 +5,7 @@ import { IRootState } from '../../store';
 import { toggleRTL, toggleTheme, toggleSidebar } from '../../store/themeConfigSlice';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-import logo from './32x38.png'
+import logo from './logo.png'
 import Dropdown from '../Dropdown';
 import IconMenu from '../Icon/IconMenu';
 import IconCalendar from '../Icon/IconCalendar';
